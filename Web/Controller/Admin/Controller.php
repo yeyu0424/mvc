@@ -14,6 +14,6 @@ class Controller
 	public function display($tpl)
 	{
 		$cname = get_class($this);
-		require("./Web/View/{$cname}/".$tpl.".html");
+		require("./Web/View/Admin/{$cname}/".$tpl.".html");
 	}
 }
