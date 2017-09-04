@@ -1,14 +1,14 @@
 <?php
 
-class Type
+class Type extends Controller
 {
 	public function index()
 	{
-		echo "Type类 Index方法";
+		$this->display("index");
 	}
 
 	public function add()
 	{
-		echo "Type类 add方法";
+		$this->display("add");
 	}
 }

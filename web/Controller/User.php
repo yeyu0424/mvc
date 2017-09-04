@@ -1,14 +1,14 @@
 <?php
 
-class User
+class User extends Controller
 {
 	public function index()
 	{
-		echo "User类 Index方法";
+		$this->display("index");
 	}
 
 	public function add()
 	{
-		echo "User类 add方法";
+		$this->display("add");
 	}
 }
