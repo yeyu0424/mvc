@@ -15,6 +15,7 @@ function __autoload($cname)
 		die("<h2>错误！{$cname}类加载失败！");
 	}
 }
+
 //导入配置文件  函数库
 require("./Web/Common/function.php");
 require("./Web/Conf/config.php");

@@ -4,8 +4,23 @@ class Index extends Controller
 {
 	public function indexs()
 	{
-		echo "<h2>网站后台</h2><br/>";
-		$url = dirName(URL)."index.php";
-		echo "<a href='{$url}'>网站前台</a>";
+		$this->display("index");
 	}
+
+	public function top()
+	{
+		$this->display("top");
+	}
+
+	public function menu()
+	{
+		$this->display("menu");
+	}
+
+	public function main()
+	{
+		$this->display("main");
+	}
+
+
 }
