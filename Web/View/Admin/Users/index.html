@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <h2>用户管理</h2>
+    <table width="90%" border="1">
+        <tr>
+            <th>Id号</th>
+            <th>账号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>电话</th>
+            <th>邮箱</th>
+            <th>状态</th>
+            <th>注册时间</th>
+            <th>操作</th>
+        </tr>
+        <?php
+            foreach($this->list as $ov){
+                echo "<tr>";
+                echo "<td>{$ov['id']}</td>";
+                echo "<td>{$ov['username']}</td>";
+                echo "<td>{$ov['name']}</td>";
+                echo "<td>{$ov['sex']}</td>";
+                echo "<td>{$ov['phone']}</td>";
+                echo "<td>{$ov['email']}</td>";
+                echo "<td>{$ov['state']}</td>";
+                echo "<td>{$ov['addtime']}</td>";
+                echo "<td><a href='".URL."/users/del?id={$ov['id']}'>删除</a>
+                            <a href='".URL."?id={$ov['id']}'>修改</a>
+                        </td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
+    </body>
+</html>

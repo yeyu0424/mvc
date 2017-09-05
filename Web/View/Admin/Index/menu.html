@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>网站后台</title>
+	<style>
+		ul,li,a{margin:0;padding:0px;}
+		ul{list-style:none;}
+		ul li{line-height:40px;}
+	</style>
 </head>
 	<body>
-		<h2>menu页面</h2>
+		<ul>
+			<li><a target="main" href="<?php echo URL."/users/indexs"; ?>">会员管理</a></li>
+			<li><a target="main" href="<?php echo URL."/users/add"; ?>">会员添加</a></li>
+			<li><a target="main" href="<?php echo URL."/goods/indexs"; ?>">商品管理</a></li>
+			<li><a target="main" href="<?php echo URL."/goods/add"; ?>">商品添加</a></li>
+			<li><a target="main" href="<?php echo URL."/type/indexs"; ?>">类型管理</a></li>
+			<li><a target="main" href="<?php echo URL."/type/add"; ?>">类型添加</a></li>
+		</ul>
 	</body>
 </html>
