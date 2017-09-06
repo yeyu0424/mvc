@@ -27,6 +27,7 @@ $method = !empty($pathinfo[2])?$pathinfo[2]:"indexs";
 
 //定义当前URL地址 类名 方法名
 define("URL",$_SERVER['SCRIPT_NAME']);
+define("_PUBLIC_",dirname($_SERVER['SCRIPT_NAME'])."Public/");
 define("CONTROLLER",$className);
 define("METHOD",$method);
 //实例化并调用

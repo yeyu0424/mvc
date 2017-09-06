@@ -1,21 +1,50 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>网站后台</title>
-	<style>
-		ul,li,a{margin:0;padding:0px;}
-		ul{list-style:none;}
-		ul li{line-height:40px;}
-	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左侧导航menu</title>
+<link href="<?php echo _PUBLIC_."admin/" ?>css/css.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo _PUBLIC_."admin/" ?>js/sdmenu.js"></script>
+<script type="text/javascript">
+	// <![CDATA[
+	var myMenu;
+	window.onload = function() {
+		myMenu = new SDMenu("my_menu");
+		myMenu.init();
+	};
+	// ]]>
+</script>
+<style type=text/css>
+html{ SCROLLBAR-FACE-COLOR: #538ec6; SCROLLBAR-HIGHLIGHT-COLOR: #dce5f0; SCROLLBAR-SHADOW-COLOR: #2c6daa; SCROLLBAR-3DLIGHT-COLOR: #dce5f0; SCROLLBAR-ARROW-COLOR: #2c6daa;  SCROLLBAR-TRACK-COLOR: #dce5f0;  SCROLLBAR-DARKSHADOW-COLOR: #dce5f0; overflow-x:hidden;}
+body{overflow-x:hidden; background:url(<?php echo _PUBLIC_."admin/" ?>images/main/leftbg.jpg) left top repeat-y #f2f0f5; width:194px;}
+</style>
 </head>
-	<body>
-		<ul>
-			<li><a target="main" href="<?php echo URL."/users/indexs"; ?>">会员管理</a></li>
-			<li><a target="main" href="<?php echo URL."/users/add"; ?>">会员添加</a></li>
-			<li><a target="main" href="<?php echo URL."/goods/indexs"; ?>">商品管理</a></li>
-			<li><a target="main" href="<?php echo URL."/goods/add"; ?>">商品添加</a></li>
-			<li><a target="main" href="<?php echo URL."/type/indexs"; ?>">类型管理</a></li>
-			<li><a target="main" href="<?php echo URL."/type/add"; ?>">类型添加</a></li>
-		</ul>
-	</body>
+<body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
+<div id="left-top">
+	<div><img src="<?php echo _PUBLIC_."admin/" ?>images/main/member.gif" width="44" height="44" /></div>
+    <span>账号：<?php echo $_SESSION['adminuser']['username']; ?><br>姓名：<?php echo $_SESSION['adminuser']['name']; ?></span>
+</div>
+    <div style="float: left" id="my_menu" class="sdmenu">
+      <div class="collapsed">
+        <span>会员管理</span>
+        <a href="<?php echo URL."/users/indexs" ?>" target="mainFrame" onFocus="this.blur()">浏览会员</a>
+        <a href="<?php echo URL."/users/add" ?>" target="mainFrame" onFocus="this.blur()">添加会员</a>
+      </div>
+      <div>
+        <span>商品类别管理</span>
+        <a href="main.html" target="mainFrame" onFocus="this.blur()">浏览商品类别</a>
+        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">添加商品类别</a>
+      </div>
+      <div>
+        <span>商品管理</span>
+        <a href="main.html" target="mainFrame" onFocus="this.blur()">浏览商品</a>
+        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">添加商品</a>
+      </div>
+      <div>
+        <span>订单管理</span>
+        <a href="main.html" target="mainFrame" onFocus="this.blur()">管理未处理订单</a>
+        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">管理已处理订单</a>
+      </div>
+    </div>
+</body>
 </html>

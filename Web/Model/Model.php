@@ -28,7 +28,7 @@ class Model
 
     public function query($sql)
     {
-        $stmt = $this->pdo->qurey($sql);
+        $stmt = $this->pdo->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

@@ -2,7 +2,16 @@
 
 class Controller
 {
-	public function run($method)
+    public function __construct()
+    {
+        if(CONTROLLER!=="Login" && empty($_SESSION["adminuser"])){
+            $url = URL."/Login/logins";
+            header("Location:{$url}");
+            exit();
+        }
+    }
+
+    public function run($method)
 	{
 		if(method_exists($this,$method)){
 			$this->$method();

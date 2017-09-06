@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>网站后台管理</title>
+</head>
+<body>
+<center>
+
+    <h3>网站后台登录</h3>
+    <form action="<?php echo URL."/login/doLogin"; ?>" method="post">
+    <table>
+        <tr>
+            <td>账号：</td>
+            <td><input type="text" name="username"/></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="pass"/></td>
+        </tr>
+        <tr>
+            <td>验证码：</td>
+            <td>
+                <input type="text" name="mycode" size="6"/>
+                <img src="<?php echo URL."/login/verify"; ?>" onclick="this.src='<?php echo URL."/login/verify"; ?>?a='+Math.random();"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="登录"/>
+                <input type="reset" value="重置"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <br/>
+    <?php
+        //判断是否有错误输出
+        if(!empty($this->errorinfo)){
+            echo "<span style='color:red'>{$this->errorinfo}</span>";
+        }
+    ?>
+</center>
+</body>
+</html>
